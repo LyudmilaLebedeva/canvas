@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="title">Hello</h1>
+    <button>Нажми меня</button>
+    <script src="./index.js"></script>
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click', () => {
+            fetch("https://smartapp-code.sberdevices.ru/chatadapter/chatapi/webhook/sber_nlp2/GZrxsmMm:c0c911d5eca5a8667df4c1ccb1bc7dba02c89cf3", {
+                method: "POST",
+                origin: 'jkh',
+                body: "{}"
+            })
+                .then((res) => button.textContent = JSON.stringify(res))
+                .catch((err) => button.textContent =  err)
+        })
+    </script>
+</body>
+
+</html>
