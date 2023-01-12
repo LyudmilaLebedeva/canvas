@@ -18,7 +18,6 @@
         button.addEventListener('click', () => {
             fetch("https://smartapp-code.sberdevices.ru/chatadapter/chatapi/webhook/sber_nlp2/GZrxsmMm:c0c911d5eca5a8667df4c1ccb1bc7dba02c89cf3", {
                 method: "POST",
-                origin: 'jkh',
                 body: "{}"
             })
                 .then((res) => button.textContent = JSON.stringify(res))
